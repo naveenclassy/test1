@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+:root{
+    --first: #9c0783;
+    --firstlight:#d66e92;
+    --second:#0d1137;
+    --secondlight:#0d1137be;
+}
+::selection{
+    background-color: black;
+    
+}
+.li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+header{
+    height: 100vh;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.856),rgba(0, 0, 0, 0.233)),url("images/aamec.heic");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    
+}
+.header-element{
+    background-color: var(--second);
+    padding: 0rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+.logo{
+
+    display: flex;
+    height: 59px;
+    align-items: center;
+    color:white;
+}
+.logoname{
+    display: none;
+}
+.navlinks{
+ display: flex;
+ width: 60%;
+ justify-content: space-between;
+ align-items: center;
+}
+.navlinks a{
+    color: white;
+}
+.navlinks  li::after{
+    content: '';
+    display: block;
+    background-color: var(--first);
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 300ms;
+}
+.navlinks li:hover::after{
+    transform: scaleY(1);
+}
+.fa-bars{
+    color: white;
+}
+.burger{
+    display: none; 
+    cursor: pointer;
+   
+}
+@media screen and (max-width:721px){
+    .navlinks{
+        background-color: var(--secondlight);
+        flex-direction: column;
+        position: absolute;
+        right:-19vw;
+        top:12vh;
+        height:50vh;
+        width: 0%;
+        transition: all 1s;
+        padding: 1.5em 0rem;
+        
+
+    }
+    .burger
+    {
+display: block;
+    }
+}
+.showlogoname{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation:typing 1s steps(5)
+}
+@keyframes typing {
+    from{width:0}
+    
+}
+.show{
+right:0px;
+    width:100%;
+}
+.texthead{
+    width: 100%;
+color: white;
+position:absolute;
+top:35%;
+left: 3%;
+transition: 1.3s;
+}
+#head1{
+    font-size:2.4rem;
+    -webkit-text-stroke: white 1px;
+}
+.textheadhide{
+    left:-50rem
+}
+
+.content{
+    max-width:1020px;
+    margin:auto;
+}
+.mb{
+    margin-bottom: 5rem;
+}
+.mt{
+    margin-top: 5rem;
+}
+
+.centerhead,.aboutcollege{
+    text-align: center;
+}
+.centerhead{
+    padding: 2rem 0rem;
+}
+.divforvm{
+    margin-top: 6rem;
+    background-image: url('/images/visionmission.webp');
+background-repeat: no-repeat;
+background-size: cover;
+
+font-size: 20px;
+}
+.vision{
+  width: 90%;
+}
+.centerhead3,.vision{
+    position: relative;
+    left:2rem;
+    color: white;
+   
+}
+.centerhead3content{
+    position: relative;
+    left: 5rem;
+}
+.centerhead1,.centerhead3{
+    padding-top: 50px;
+
+}
+.mission{
+    padding-bottom:60px ;
+}
+.centerhead3content{
+    width: 50%;
+    color: white;
+}
+.missionli{
+    display: block;
+    padding-top: 20px;
+}
+@media  screen and (max-width:685px){
+
+    .centerhead3content{
+        width: 79%;
+       
+    }
+
+}
+.mt{
+    margin-top: 2rem;
+}
+.mb{
+    margin-bottom: 2rem;
+}
+.Acedemics{
+    margin-top: 4rem;
+}
+.acedemicshead{
+    text-align: center;
+    background-image:url('https://images.pexels.com/photos/8250951/pexels-photo-8250951.jpeg?auto=compress&cs=tinysrgb&w=400');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#head{
+    padding-top: 7rem;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    
+}
+#para{
+    padding-bottom: 7rem;
+    color: rgb(255, 255, 255);
+font-size: 1.1rem;
+
+   
+
+}
+#head,#para{
+    width: 100%;
+    margin: auto;
+}
+.acimg{
+    position: relative;
+}
+.acimg img{
+    display: block;
+}
+.acimg::after{
+    position: absolute;
+    content: '';
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right:0%;
+    transform-origin: left;
+    transform: scale(0,1);
+    background-color: rgba(0, 0, 0, 0.671);
+    transition:transform 300ms;
+}
+.Computer:hover .acimg::after{
+ transform: scale(1)   ;
+ 
+ 
+}
+.Computer,.chemical{
+    position: relative;
+    border: 3px red solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+.achead{
+    position: absolute;
+    width: 50%;
+   top: 30%;
+   left: -300%;
+   transform: translate(-40%,-45%);
+   transition: left 400ms;
+   color: white;
+   
+}
+.Computer:hover .achead{
+    left: 49%;
+   }
+.acpara{
+    text-align: center;
+}
+.firsthead{
+    text-align: center;
+}
+.course-content{
+    display: grid;
+    grid-column-gap: 30px ;
+    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+} 
+.acimgchem{
+    position: relative;
+}
+.acimgchem img{
+    display: block;
+}
+.acimgchem::after{
+    position: absolute;
+    content: '';
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right:0%;
+    transform-origin: right;
+    transform: scale(0,1);
+    background-color: rgba(0, 0, 0, 0.671);
+    transition:transform 300ms;
+}
+.chemical:hover .acimgchem::after{
+ transform: scale(1)   ;
+ 
+ 
+}
+.chemical{
+    position: relative;
+    border: 3px red solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+.acheadchem{
+    position: absolute;
+    width: 50%;
+   top: 35%;
+   right: -100%;
+   transform: translate(-40%,-45%);
+   transition: right 400ms; 
+   color: white;
+   
+}
+ .chemical:hover .acheadchem{
+    right: 5%;
+   } 
+   @media  screen and (min-width:690px){
+    .course-content1{
+        width: 50%;
+    }
+   }
+   .campus{
+    margin-top: 6rem;    
+   }
+   .campheadcontent{
+    background-color: rgba(128, 128, 128, 0.096);
+}
+.camphead{
+    width:90%;
+    margin:auto;
+}
+.camphead h1{
+    padding: 5rem 0rem 2rem 0rem;
+
+}
+.camphead p{
+    line-height: 2rem;
+    padding-bottom: 5rem;
+}
+.camcontent{
+
+    display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+}
+.cam{
+    width: 50%;
+    color: white;
+    background-color: var(--first);
+    margin: 1rem 0rem;
+    position: relative;
+}
+.camtext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: z-index 300ms;
+}
+.camimg img{
+    display: block;
+}
+.camtext h1{
+    text-align: center;
+
+}
+.camtext p{
+    text-align: center;
+}
+.cam:hover .camimg{
+left:80%;
+transition: left 400ms,opacity 600ms;
+
+}
+.cam:hover .camimg>img{
+    box-shadow: 30px 0px 100px 3px black;
+
+}
+.cam:hover .camtext{
+    z-index: 1;
+    transition: z-index 800ms;
+}
+.camimg{
+    position: relative;
+    left: 20px;
+    padding: 20px 0px;
+    transition: left 800ms;
+  
+}
+@media  screen and (max-width:971px){
+
+    .cam{
+        width: 70%;
+    }
+    .cam:hover .camimg{
+        opacity: 0;
+        }
+}
+
+@media screen and (max-width:453px){
+
+    .cam{
+        width: 98%;
+    }
+}
+
+.footimg{
+    width:90px;
+}
+.footermain{
+    background-color: var(--second);
+    color: white;
+    text-decoration: none;
+    height: 75vh;
+    
+}
+.sec1>a,.sec2>a{
+    color: white;
+
+}
+.footcontent{
+    padding-top: 4rem;
+    display: flex;
+   justify-content: space-between;
+} 
+
+    .maincol{
+        width: 262px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    .col1content{
+        width: 50%;
+        
+    }
+    .col1content>p{
+        padding-top: 1rem;
+    }
+    .sec1,.sec2{
+        display: flex;
+        flex-direction: column;
+    }
+.sec2>a,.sec1>a{
+    margin-top: 1rem;
+}
+
+.hr1{
+    margin-top: 50px;
+    color: white;
+}
+.footbottom{
+    padding-top: 2rem;
+    text-align: center;
+}
+@media  screen and (max-width:1047px) {
+    .footcontent{
+        width: 90%;
+    }  
+}
+@media  screen and (max-width:808px) {
+    .maincol{
+        
+    display: flex;
+    flex-direction: column;
+        
+    }
+    .col3{
+        padding-top:3rem ;
+    }
+    .footermain{
+        height: 90vh;
+    }
+}
+@media  screen and (max-width:545px) {
+    .footcontent{
+    display: flex;
+    flex-direction: column
+    ;
+    }
+    .maincol{
+        padding-top:4rem;
+    }
+    .footermain{
+        height: 140vh;
+    }
+    .col1content{
+        width: 100%;
+        
+    }
+}
+@media  screen and (max-width:340px) {
+    .footermain{
+        height: 145vh;
+    }
+
+}
