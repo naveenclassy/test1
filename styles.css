@@ -35,12 +35,14 @@ header{
     
 }
 .header-element{
+    position: sticky;
     background-color: var(--second);
     padding: 0rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 12vh;
+   
 }
 
 .logo{
@@ -159,7 +161,7 @@ font-size: 20px;
 .vision{
   width: 90%;
 }
-.centerhead3,.vision{
+.centerhead3,.vision,.abquality{
     position: relative;
     left:2rem;
     color: white;
@@ -458,8 +460,9 @@ transition: left 400ms,opacity 600ms;
     margin-top: 50px;
     color: white;
 }
-.footbottom{
-    padding-top: 2rem;
+.footbottom>p{
+    padding-top: 1rem;
+   
     text-align: center;
 }
 @media  screen and (max-width:1047px) {
@@ -503,4 +506,124 @@ transition: left 400ms,opacity 600ms;
         height: 145vh;
     }
 
+}
+.abquality{
+    padding: 4rem 0rem;
+}
+.qualityhead{
+    padding: 2rem 0rem;
+    color: black;
+}
+.qualitypara{
+    line-height: 30px;
+    font-size:15px;
+    width: 58%;
+    padding-right: 1rem ;
+    color: black;
+    
+}
+@media  screen and (max-width:652px) {
+    .qualitypara{
+        width: 95%;
+    }
+}
+@media  screen and (max-width:353px) {
+    .qualitypara{
+        width: 100%;
+        padding-right: 2rem;
+    }
+}
+.foundermainhead{
+    text-align: center;
+    padding: 1rem 0rem 5rem;
+}
+.founderbox{
+   margin-bottom: 5rem;
+    
+background-color: rgba(211, 211, 211, 0.37);
+}
+.founderimg{
+    width: 30%;
+    height:30%;
+    border: 1px ;
+    border-radius: 50%;
+    padding: 4rem ;
+   
+
+}
+.founderimg>img{
+    border-radius: 50%;
+    filter: drop-shadow(-10px -10px 40px rgb(102, 78, 238));
+}
+.founderbox{
+    display: flex;
+}
+.foundercontent{
+    width: 70%;
+    padding: 2rem;
+    line-height: 27px;
+}
+.founderpara>p{
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+@media  screen and (max-width:985px) {
+    .founderimg{
+        width: 40%;
+    }
+}
+@media  screen and (max-width:760px) {
+
+.foundercontent{
+    width: 100%;
+}
+.founderhead{
+    text-align: center;
+}
+    .founderbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .founderimg{
+        display: flex;
+        justify-content: center;
+        width: 100%;}
+        .founderimg>img{
+            width: 30%;
+            border-radius: 50%;
+        }
+}
+@media  screen and (max-width:598px){
+    .founderimg>img{
+        width: 50%;
+        border-radius: 50%;
+    }
+}
+@media  screen and (max-width:406px){
+    .founderimg>img{
+        width: 80%;
+        border-radius: 50%;
+    }
+    .foundercontent{
+        padding: 1rem ;
+    }
+}
+.location{
+    margin:5rem 0rem;
+    
+}
+.locationhead{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.locationmap{
+    padding: 0rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+.Acedemicsheader{
+    background-image: none;
+    height: 10vh;
 }
