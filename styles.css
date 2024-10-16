@@ -5,6 +5,9 @@
     font-family: "Poppins", sans-serif;
     
 }
+html,body{
+    overflow-x:hidden;
+}
 :root{
     --first: #9c0783;
     --firstlight:#d66e92;
